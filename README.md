@@ -279,6 +279,40 @@ For the validate event, the event returns an object of objects that contains car
 
 To start using Hosted Fields, you need to create a basic HTML checkout form. You will need to define containers that will hold the iframe input fields for the following inour fields (Card Number, Expiry Date, CVV, PIN, OTP).
 
+### **Test Details**
+
+<table class="test-details-table"> 
+    <tr> 
+        <td>Currency Code</td> 
+        <td>566</td>
+    </tr> 
+    <tr> 
+        <td>Merchant Code</td> 
+        <td>MX6072</td>
+    </tr>
+    <tr> 
+        <td>Payable Code</td> 
+        <td>9405967</td>
+    </tr>
+    <tr> 
+        <td>Card Number</td> 
+        <td>5060 9905 8000 0217 499</td>
+    </tr>
+    <tr> 
+        <td>Expiry Date</td> 
+        <td>03/50</td>
+    </tr>
+    <tr> 
+        <td>CVV</td> 
+        <td>111</td>
+    </tr>
+    <tr> 
+        <td>PIN</td> 
+        <td>1111</td>
+    </tr> 
+</table>
+
+
 ### Additional Information
 
 For more details on how to integrate with Interswitch Hosted Fields, see the [official documentation](https://developer.interswitchgroup.com/docs/payment-gateway/hosted-fields/#introduction)
