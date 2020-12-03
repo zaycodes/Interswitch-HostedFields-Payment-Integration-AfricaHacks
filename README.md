@@ -6,9 +6,9 @@ The [Payment Card Industry Data Security Standard (PCI DSS)](https://en.wikipedi
 
 There are [12 requirements](https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard#Requirements) merchants must meet before they can be deemed fit to proces, store or transmit credit card information, however, not all merchants or businesses are PCIDSS compliant and this is where hosted fields SDK comes in 
 
-Hosted Fields is an SDK designed by Interswitch Group for businesses who are non PCIDSS compliant to integrate with it's payment gateway giving you control over how your checkout page feels. 
+Hosted Fields is an SDK designed by [Interswitch Group](https://www.interswitchgroup.com/) for businesses who are non PCIDSS compliant to integrate with it's payment gateway giving you control over how your checkout page feels. 
 
-With hosted fields, you can host Interswitch's payment gateway on your domain and present the fields to your users in an iframe to handle input of the following payments fields: **Expiry Date**, **CVV**, **PIN** and **OTP** on your checkout page. This gives you the control over the look and feel of your checkout page while ensuring that you are compliant with PCIDSS requirements.
+With hosted fields, you can host Interswitch's [payment gateway](https://developer.interswitchgroup.com/docs/payment-gateway/) on your domain and present the fields to your users in an iframe to handle input of the following payments fields: **Expiry Date**, **CVV**, **PIN** and **OTP** on your checkout page. This gives you the control over the look and feel of your checkout page while ensuring that you are compliant with PCIDSS requirements.
 
 ## **Setup**
 
@@ -277,161 +277,17 @@ For the validate event, the event returns an object of objects that contains car
 
 ## **Integration**
 
-To start using Hosted Fields, you need to create a basic HTML checkout form. You will need to define containers that will hold the iframe input fields for the following inour fields (Card Number, Expiry Date, CVV, PIN, OTP). Here is a sample form that uses Hosted Fields. 
+To start using Hosted Fields, you need to create a basic HTML checkout form. You will need to define containers that will hold the iframe input fields for the following inour fields (Card Number, Expiry Date, CVV, PIN, OTP).
 
-### Method 1
+### Additional Information
 
-<br>
+For more details on how to integrate with Interswitch Hosted Fields, see the [official documentation](https://developer.interswitchgroup.com/docs/payment-gateway/hosted-fields/#introduction)
 
-<strong>Hosted Fields Demo</strong>
+---
+**NOTE**
 
-<p class="codepen" data-height="601" data-theme-id="dark" data-default-tab="js,result" data-user="basitomania" data-slug-hash="GRKyRrW" style="height: 601px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hosted Fields: Demo">
-  <span>See the Pen <a href="https://codepen.io/basitomania/pen/GRKyRrW/">
-  Hosted Fields: Demo</a> by Abdulkareem Abdulbasit (<a href="https://codepen.io/basitomania">@basitomania</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+Do note that the details used in this project only works for test purposes. For information on how to integrate on production, contact [Interswitch Support](https://help.interswitchgroup.com/) 
 
-<br>
+---
 
 
-### Method 2
-
-<br>
-
-<strong>Custom WebPay Hosted Field</strong>
-
-<p class="codepen" data-height="601" data-theme-id="dark" data-default-tab="js,result" data-user="edyasikpo" data-slug-hash="JjdBomo" style="height: 601px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hosted Fields: Demo">
-  <span>See the Pen <a href="https://codepen.io/edyasikpo/pen/JjdBomo">
-  Custom WebPay Hosted Field</a> by Edidiong Asikpo (<a href="https://codepen.io/edyasikpo/pen/JjdBomo">@edyasikpo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-<br>
-
-## **Response Codes**
-
-Find below different response codes depening on the success or failure of the integration
-
-### On Bin Configuration call
-
-<table class="payment-token-table"> 
-    <tr> 
-        <th>Response Code</th> 
-        <th>Description</th> 
-    </tr> 
-    <tr> 
-        <td>Z81</td> 
-        <td>No bin was found for this pan</td> 
-    </tr> 
-</table>
-
-### On Pay call
-
-<table class="payment-token-table">
-<thead>
-<tr>
-<th style="color:#428dff;" colspan="2">Successful Response</th>
-</tr>
-</thead> 
-    <tr>
-        <th>Response Code</th> 
-        <th>Description</th> 
-    </tr>
-    <tr> 
-        <td>00</td> 
-        <td>Approved by Financial Institution</td>
-    </tr>
-    <tr> 
-        <td>T0</td> 
-        <td>Continue Transaction</td> 
-    </tr>
-</table>
-
-
-<table class="payment-token-table">
-<thead>
-<tr>
-<th style="color:#428dff;" colspan="2">Error Response</th>
-</tr>
-</thead> 
-    <tr> 
-        <th>Response Code</th> 
-        <th>Description</th> 
-    </tr>  
-    <tr> 
-        <td>XS1</td> 
-        <td>Your payment has exceeded the time required to pay.</td>
-    </tr>
-    <tr> 
-        <td>Z1</td> 
-        <td>Transaction Error.</td> 
-    </tr>
-    <tr> 
-        <td>Z5</td> 
-        <td>PAYMENT_ALREADY_PROCESSED</td>
-    </tr>
-    <tr> 
-        <td>T1</td> 
-        <td>CANNOT_GENERATE_OTP</td>
-    </tr>
-    <tr> 
-        <td>X03</td> 
-        <td>Amount greater than daily transaction limit</td>
-    </tr>
-    <tr> 
-        <td>54</td> 
-        <td>Expired Card</td>
-    </tr>
-    <tr> 
-        <td>55</td> 
-        <td>Incorrect Pin</td>
-    </tr>
-    <tr> 
-        <td>91</td> 
-        <td>Issuer or Switch Inoperative</td>
-    </tr>
-    <tr> 
-        <td>56</td> 
-        <td>No card Record</td>
-    </tr>
-</table>
-
-### On Authenticate Call
-
-<table class="payment-token-table">
-<thead>
-<tr>
-<th style="color:#428dff;" colspan="2">Successful Response</th>
-</tr>
-</thead>
-    <tr> 
-        <th>Response Code</th> 
-        <th>Description</th> 
-    </tr>
-    <tr> 
-        <td>00</td> 
-        <td>Approved by Financial Institution</td>
-    </tr>
-</table>
-
-<table class="payment-token-table">
-<thead>
-<tr>
-<th style="color:#428dff;" colspan="2">Error Response</th>
-</tr>
-</thead>
-    <tr> 
-        <th>Response Code</th> 
-        <th>Description</th> 
-    </tr>
-    <tr> 
-        <td>T1</td> 
-        <td>INVALID_TOKEN_SUPPLIED</td>
-    </tr>
-    <tr> 
-        <td>91</td> 
-        <td>Issuer or Switch Inoperative</td>
-    </tr> 
-</table>
