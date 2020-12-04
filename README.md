@@ -308,8 +308,135 @@ To start using Hosted Fields, you need to create a basic HTML checkout form. You
     </tr> 
 </table>
 
+## **Response Codes**
 
-### Additional Information
+Find below different response codes depening on the success or failure of the integration
+
+### On Bin Configuration call
+
+<table class="payment-token-table"> 
+    <tr> 
+        <th>Response Code</th> 
+        <th>Description</th> 
+    </tr> 
+    <tr> 
+        <td>Z81</td> 
+        <td>No bin was found for this pan</td> 
+    </tr> 
+</table>
+
+### On Pay call
+
+<table class="payment-token-table">
+<thead>
+<tr>
+<th style="color:#428dff;" colspan="2">Successful Response</th>
+</tr>
+</thead> 
+    <tr>
+        <th>Response Code</th> 
+        <th>Description</th> 
+    </tr>
+    <tr> 
+        <td>00</td> 
+        <td>Approved by Financial Institution</td>
+    </tr>
+    <tr> 
+        <td>T0</td> 
+        <td>Continue Transaction</td> 
+    </tr>
+</table>
+
+
+<table class="payment-token-table">
+<thead>
+<tr>
+<th style="color:#428dff;" colspan="2">Error Response</th>
+</tr>
+</thead> 
+    <tr> 
+        <th>Response Code</th> 
+        <th>Description</th> 
+    </tr>  
+    <tr> 
+        <td>XS1</td> 
+        <td>Your payment has exceeded the time required to pay.</td>
+    </tr>
+    <tr> 
+        <td>Z1</td> 
+        <td>Transaction Error.</td> 
+    </tr>
+    <tr> 
+        <td>Z5</td> 
+        <td>PAYMENT_ALREADY_PROCESSED</td>
+    </tr>
+    <tr> 
+        <td>T1</td> 
+        <td>CANNOT_GENERATE_OTP</td>
+    </tr>
+    <tr> 
+        <td>X03</td> 
+        <td>Amount greater than daily transaction limit</td>
+    </tr>
+    <tr> 
+        <td>54</td> 
+        <td>Expired Card</td>
+    </tr>
+    <tr> 
+        <td>55</td> 
+        <td>Incorrect Pin</td>
+    </tr>
+    <tr> 
+        <td>91</td> 
+        <td>Issuer or Switch Inoperative</td>
+    </tr>
+    <tr> 
+        <td>56</td> 
+        <td>No card Record</td>
+    </tr>
+</table>
+
+### On Authenticate Call
+
+<table class="payment-token-table">
+<thead>
+<tr>
+<th style="color:#428dff;" colspan="2">Successful Response</th>
+</tr>
+</thead>
+    <tr> 
+        <th>Response Code</th> 
+        <th>Description</th> 
+    </tr>
+    <tr> 
+        <td>00</td> 
+        <td>Approved by Financial Institution</td>
+    </tr>
+</table>
+
+<table class="payment-token-table">
+<thead>
+<tr>
+<th style="color:#428dff;" colspan="2">Error Response</th>
+</tr>
+</thead>
+    <tr> 
+        <th>Response Code</th> 
+        <th>Description</th> 
+    </tr>
+    <tr> 
+        <td>T1</td> 
+        <td>INVALID_TOKEN_SUPPLIED</td>
+    </tr>
+    <tr> 
+        <td>91</td> 
+        <td>Issuer or Switch Inoperative</td>
+    </tr> 
+</table>
+
+
+
+## Additional Information
 
 For more details on how to integrate with Interswitch Hosted Fields, see the [official documentation](https://developer.interswitchgroup.com/docs/payment-gateway/hosted-fields/#introduction)
 
