@@ -2,11 +2,7 @@
 Integrating to Interswitch Hosted Fields for payments, an SDK designed for non PCI DSS(Payment Card Industry Data Security Standard) compliant merchants
 
 ## Introduction
-The [Payment Card Industry Data Security Standard (PCI DSS)](https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard#Requirements) is a set of requirements intended to ensure that all companies that process, store, or transmit credit card information maintain a secure environment.
-
-There are [12 requirements](https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard#Requirements) merchants must meet before they can be deemed fit to proces, store or transmit credit card information, however, not all merchants or businesses are PCIDSS compliant and this is where hosted fields SDK comes in 
-
-Hosted Fields is an SDK designed by [Interswitch Group](https://www.interswitchgroup.com/) for businesses who are non PCIDSS compliant to integrate with it's payment gateway giving you control over how your checkout page feels. 
+Hosted Fields is an SDK designed by [Interswitch Group](https://www.interswitchgroup.com/) for businesses who are non [PCIDSS](https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard#Requirements) compliant to integrate with it's payment gateway giving you control over how your checkout page feels. 
 
 With hosted fields, you can host Interswitch's [payment gateway](https://developer.interswitchgroup.com/docs/payment-gateway/) on your domain and present the fields to your users in an iframe to handle input of the following payments fields: **Expiry Date**, **CVV**, **PIN** and **OTP** on your checkout page. This gives you the control over the look and feel of your checkout page while ensuring that you are compliant with PCIDSS requirements.
 
