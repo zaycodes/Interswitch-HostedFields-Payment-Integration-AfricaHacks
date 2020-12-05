@@ -275,6 +275,9 @@ For the validate event, the event returns an object of objects that contains car
 
 To start using Hosted Fields, you need to create a basic HTML checkout form. You will need to define containers that will hold the iframe input fields for the following inour fields (Card Number, Expiry Date, CVV, PIN, OTP).
 
+***Sample Integration on CodeSandbox***
+https://codesandbox.io/s/interswitch-hosted-fields-payment-integration-africahacks-u7hld?file=/index.html:3523-3562
+
 ### **Test Details**
 
 <table class="test-details-table"> 
